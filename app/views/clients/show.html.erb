@@ -55,5 +55,27 @@
   <%= @client.age %>
 </p>
 
+<p>
+  <strong> Monto total facturado por año </strong>
+  <%= @client.billing_per_year.each do |y, m| %>
+  <p> <%= "En #{y} facturó $#{m}"%> </p>
+  <% end %>
+</p>
+
+<p>
+  <strong> Cantidad de facturas emitidas por mes </strong>
+  <%= @client.number_per_month.each do |m, c| %>
+  <p> <%= "En el mes #{m} emitió #{c} facturas"%> </p>
+  <% end %>
+</p>
+
+<p>
+  <strong> Las 5 personas a las que mas le facturó</strong>
+  <%= @client.more_invoiced.each do |c, cant| %>
+  <p> <%= "#{c}"%> </p>
+  <% end %>
+</p>
+
+
 <%= link_to 'Edit', edit_client_path(@client) %> |
 <%= link_to 'Back', clients_path %>
