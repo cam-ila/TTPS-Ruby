@@ -29,10 +29,10 @@ ActiveRecord::Schema.define(version: 20160205220600) do
   create_table "clients", force: :cascade do |t|
     t.string   "name"
     t.string   "surname"
-    t.datetime "birthdate"
+    t.date     "birthdate"
     t.string   "genre"
     t.integer  "dni"
-    t.integer  "cuil"
+    t.string   "cuil"
     t.string   "skype"
     t.string   "email"
     t.string   "telephone"
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20160205220600) do
 
   create_table "people", force: :cascade do |t|
     t.string   "name"
-    t.integer  "cuit"
+    t.string   "cuit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
