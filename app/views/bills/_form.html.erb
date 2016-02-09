@@ -10,30 +10,31 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description, required: true %>
+<div class="container">
+  <div class="form-group">
+    <% f.label :description %> Descripción <br> 
+    <%= f.text_field :description, required: true, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.date_field :date, required: true %>
+  <div class="form-group">
+    <% f.label :date %> Fecha <br>
+    <%= f.date_field :date, required: true, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= f.label :amount %><br>
-    <%= f.text_field :amount, type: :number, required: true %>
+  <div class="form-group">
+    <% f.label :amount %>Monto <br>
+    <%= f.text_field :amount, type: :number, required: true, class: 'form-control' %>
   </div>
-  <div class="field">
-    <%= f.label :client_id %><br>
-    <%= f.text_field :client_id, required: true %>
+  <div class="form-group">
+    <% f.label :client_id %> Cliente<br> 
+    <%= f.text_field :client_id, required: true, class: 'form-control' %>
   </div>
-  <div class="field">
-    <%= f.label :person_id %><br>
-    <%= f.text_field :person_id, required: true %>
+  <div class="form-group">
+    <% f.label :person_id %> Persona <br>
+    <%= f.text_field :person_id, required: true, class: 'form-control' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-default' %>
+  </div>
   </div>
 <% end %>

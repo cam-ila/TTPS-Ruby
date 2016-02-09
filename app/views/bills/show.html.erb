@@ -1,29 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Descripcion:</strong>
   <%= @bill.description %>
 </p>
 
 <p>
-  <strong>Date:</strong>
+  <strong>Fecha:</strong>
   <%= @bill.date %>
 </p>
 
 <p>
-  <strong>Amount:</strong>
+  <strong>Monto:</strong>
   <%= @bill.amount %>
 </p>
 
 <p>
-  <strong>Client:</strong>
-  <%= @bill.client %>
+  <strong>Cliente:</strong>
+  <%= @bill.client.full_name %>
 </p>
 
 <p>
-  <strong>Person:</strong>
-  <%= @bill.person %>
+  <strong>Persona:</strong>
+  <%= @bill.person.name %>
 </p>
 
-<%= link_to 'Edit', edit_bill_path(@bill) %> |
-<%= link_to 'Back', bills_path %>
+<%= link_to 'Editar', edit_bill_path(@bill), :class => "btn btn-default" %> |
+<%= link_to 'Volver', bills_path, :class => "btn btn-default" %>

@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @person.name %>
 </p>
 
 <p>
-  <strong>Cuit:</strong>
+  <strong>CUIT/CUIL:</strong>
   <%= @person.cuit %>
 </p>
 
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
+<%= link_to 'Edit', edit_person_path(@person), :class => "btn btn-default" %> |
+<%= link_to 'Back', people_path , :class => "btn btn-default" %>
