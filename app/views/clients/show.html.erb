@@ -1,22 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @client.name %>
 </p>
 
 <p>
-  <strong>Surname:</strong>
+  <strong>Apellido:</strong>
   <%= @client.surname %>
 </p>
 
 <p>
-  <strong>Birthdate:</strong>
+  <strong>Fecha de nacimiento:</strong>
   <%= @client.birthdate %>
 </p>
 
 <p>
-  <strong>Genre:</strong>
+  <strong>Genero:</strong>
   <%= @client.genre %>
 </p>
 
@@ -26,7 +26,7 @@
 </p>
 
 <p>
-  <strong>Cuil:</strong>
+  <strong>CUIL/CUIT:</strong>
   <%= @client.cuil %>
 </p>
 
@@ -41,12 +41,12 @@
 </p>
 
 <p>
-  <strong>Telephone:</strong>
+  <strong>Telefono:</strong>
   <%= @client.telephone %>
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <strong>Direccion:</strong>
   <%= @client.address %>
 </p>
 
@@ -57,21 +57,22 @@
 
 <p>
   <strong> Monto total facturado por año </strong>
-  <%= @client.billing_per_year.each do |y, m| %>
+  <% @client.billing_per_year.each do |y, m| %>
   <p> <%= "En #{y} facturó $#{m}"%> </p>
   <% end %>
 </p>
 
 <p>
   <strong> Cantidad de facturas emitidas por mes </strong>
-  <%= @client.number_per_month.each do |m, c| %>
-  <p> <%= "En el mes #{m} emitió #{c} facturas"%> </p>
+  <% @client.number_per_month.each do |m, c| %>
+  <p> <%= "En el mes #{month_names(m)} emitió #{c} facturas"%> </p>
+<%# I18n.l(Time.now, format: "%B") %>
   <% end %>
 </p>
 
 <p>
   <strong> Las 5 personas a las que mas le facturó</strong>
-  <%= @client.more_invoiced.each do |c, cant| %>
+  <% @client.more_invoiced.each do |c, cant| %>
   <p> <%= "#{c}"%> </p>
   <% end %>
 </p>

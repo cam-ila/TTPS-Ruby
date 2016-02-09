@@ -11,15 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+<div class="container">
+  
+  <div class="form-group">
+    <% f.label :name %> Nombre <br>
+    <%= f.text_field :name, required: true, class: 'form-control' %>
   </div>
-  <div class="field">
-    <%= f.label :cuit %><br>
-    <%= f.number_field :cuit %>
+
+  <div class="form-group">
+    <% f.label :cuit %> CUIT/CUIL (11 digitos) <br>
+    <%= f.number_field :cuit, size: :"11", required: true, class: 'form-control' %>
   </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-default' %> 
   </div>
+
+</div>
 <% end %>
+

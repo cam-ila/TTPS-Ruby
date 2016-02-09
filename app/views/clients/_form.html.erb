@@ -13,27 +13,27 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, required: true  %>
   </div>
   <div class="field">
     <%= f.label :surname %><br>
-    <%= f.text_field :surname %>
+    <%= f.text_field :surname, required: true %>
   </div>
   <div class="field">
     <%= f.label :birthdate %><br>
-    <%= f.datetime_select :birthdate %>
+    <%= f.date_field :birthdate, required: true %>
   </div>
   <div class="field">
     <%= f.label :genre %><br>
-    <%= f.text_field :genre %>
+    <%= f.text_field :genre, required: true %>
   </div>
   <div class="field">
     <%= f.label :dni %><br>
-    <%= f.number_field :dni %>
+    <%= f.number_field :dni, required: true %>
   </div>
   <div class="field">
     <%= f.label :cuil %><br>
-    <%= f.number_field :cuil %>
+    <%= f.number_field :cuil, required: true, size: "11" %>
   </div>
   <div class="field">
     <%= f.label :skype %><br>
@@ -41,7 +41,7 @@
   </div>
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, type: :email, required: true %>
   </div>
   <div class="field">
     <%= f.label :telephone %><br>
@@ -52,6 +52,6 @@
     <%= f.text_field :address %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-primary' %>
   </div>
 <% end %>

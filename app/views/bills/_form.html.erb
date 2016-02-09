@@ -13,23 +13,25 @@
 
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_field :description, required: true %>
   </div>
+
   <div class="field">
     <%= f.label :date %><br>
-    <%= f.datetime_select :date %>
+    <%= f.date_field :date, required: true %>
   </div>
+
   <div class="field">
     <%= f.label :amount %><br>
-    <%= f.text_field :amount %>
+    <%= f.text_field :amount, type: :number, required: true %>
   </div>
   <div class="field">
     <%= f.label :client_id %><br>
-    <%= f.text_field :client_id %>
+    <%= f.text_field :client_id, required: true %>
   </div>
   <div class="field">
     <%= f.label :person_id %><br>
-    <%= f.text_field :person_id %>
+    <%= f.text_field :person_id, required: true %>
   </div>
   <div class="actions">
     <%= f.submit %>
