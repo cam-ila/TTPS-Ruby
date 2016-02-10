@@ -57,26 +57,31 @@
 
 <p>
   <strong> Monto total facturado por año </strong>
+  <ul>
   <% @client.billing_per_year.each do |y, m| %>
-  <p> <%= "En #{y} facturó $#{m}"%> </p>
-  <% end %>
+  <li><p> <%= "En #{y} facturó $#{m}"%> </p></li>
+  <% end %>  
+  </ul>
 </p>
 
 <p>
   <strong> Cantidad de facturas emitidas por mes </strong>
+  <ul>
   <% @client.number_per_month.each do |m, c| %>
-  <p> <%= "En el mes #{month_names(m)} emitió #{c} facturas"%> </p>
-<%# I18n.l(Time.now, format: "%B") %>
+  <li><p> <%= "En el mes de #{month_names(m)} se emitieron #{c} facturas"%> </p></li>
   <% end %>
+  </ul>
 </p>
 
 <p>
-  <strong> Las 5 personas a las que mas le facturó</strong>
-  <% @client.more_invoiced.each do |c, cant| %>
-  <p> <%= "#{c}"%> </p>
-  <% end %>
+  <strong> Las 5 personas a las que mas le facturó en el año  <%= "#{Date.today.year}" %> </strong>
+  <ul>
+    <% @client.more_invoiced.each do |c, cant| %>
+    <li><p> <%= "#{c.name} con CUIL/CUIT: #{c.cuit}" %> </p></li>
+    <% end %>
+  </ul>
 </p>
 
-
+<br>
 <%= link_to 'Editar', edit_client_path(@client), :class => "btn btn-default btn-sm" %> |
 <%= link_to 'Volver', clients_path, :class => "btn btn-default btn-sm" %>

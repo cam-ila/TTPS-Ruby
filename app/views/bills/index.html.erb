@@ -7,7 +7,7 @@
     <tr>
       <th>Descripción</th>
       <th>Fecha</th>
-      <th>Monto</th>
+      <th>Monto en pesos</th>
       <th>Cliente</th>
       <th>Persona</th>
       <th colspan="3"></thclass="text-center">
@@ -20,12 +20,12 @@
         <td><%= bill.description %></td>
         <td><%= bill.date %></td>
         <td><%= bill.amount %></td>
-        <td><%= bill.client.full_name %></td>
-        <td><%= bill.person.name %></td>
+        <td><%= link_to bill.client.full_name, bill.client %></td>
+        <td><%= link_to bill.person.name, bill.person %></td>
         <td>
           <%= link_to 'Ver', bill, :class => "btn btn-default btn-sm" %>
           <%= link_to 'Editar', edit_bill_path(bill), :class => "btn btn-default btn-sm" %>
-          <%= link_to 'Eliminar', bill, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default btn-sm" %>
+          <%= link_to 'Eliminar', bill, method: :delete, data: { confirm: 'Esta seguro?' }, :class => "btn btn-default btn-sm" %>
         </td>
       </tr>
     <% end %>
