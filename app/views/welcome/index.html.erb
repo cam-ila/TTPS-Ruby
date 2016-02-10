@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="text-center">Estudio contable E-Vader</h1> <br>
+
+
+<div class="container">
+	<ul>
+  		<li>
+			<%= link_to 'Nuevo Cliente', new_client_path, :class => "btn btn-link" %>
+  		</li>
+  		<li>
+			<%= link_to 'Listado de Cliente', clients_path, :class => "btn btn-link" %>	
+  		</li>
+  		<li>
+  			<%= link_to 'Nueva Factura', new_bill_path, :class => "btn btn-link" %>	
+		</li>
+  		<li>
+			<%= link_to 'Listado de Facturacion', bills_path, :class => "btn btn-link" %>	
+  		</li>
+  		<li>
+			<%= link_to 'Nueva Persona', new_person_path, :class => "btn btn-link" %>	
+  		</li>
+		<li>
+			<%= link_to 'Listado de personas', people_path, :class => "btn btn-link" %>	
+		</li>
+	</ul>
+
+</div>
