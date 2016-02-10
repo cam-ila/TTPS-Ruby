@@ -7,3 +7,11 @@ one:
 two:
   name: MyString
   cuit: 1
+
+three:
+  name: angel legna
+  cuit: 20122233334
+
+four:
+  name: pepe epep
+  cuit: 10322299881

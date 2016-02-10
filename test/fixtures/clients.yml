@@ -1,5 +1,4 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
   name: MyString
   surname: MyString
@@ -23,3 +22,39 @@ two:
   email: MyString
   telephone: MyString
   address: MyString
+
+three:
+  name: Jose
+  surname: Perez
+  birthdate: 2000-09-05 18:36:04
+  genre: Femenino
+  dni: 40090090
+  cuil: 1040090090
+  skype: sarasa
+  email: jose@perez
+  telephone: 15233423
+  address: 30 n° 302
+
+four:
+  name: Juante
+  surname: Lodije
+  birthdate: 1996-09-05 18:36:04
+  genre: Masculino
+  dni: 39097293
+  cuil: 10390972932
+  skype: unskype
+  email: Juante@lodije
+  telephone: 39929299
+  address: 40 n° 10
+
+five:
+  name: Asi
+  surname: Nomas
+  birthdate: 1990-09-05 18:36:04
+  genre: Masculino
+  dni: 39127293
+  cuil: 10390972992
+  skype: otroskype
+  email: asi@nomas
+  telephone: 2219291992
+  address: 44 n° 1030

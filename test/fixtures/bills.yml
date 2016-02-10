@@ -12,4 +12,18 @@ two:
   date: 2016-02-05 19:04:17
   amount: 
   client_id: 
-  person_id: 
+  person_id:
+
+three:
+  description: factura
+  date: 2016-02-05 19:04:17
+  amount: 100
+  client_id: 1
+  person_id: 1
+
+four:
+  description: factura dos
+  date: 2016-02-05 19:04:17
+  amount: 300
+  client_id: 1
+  person_id: 2

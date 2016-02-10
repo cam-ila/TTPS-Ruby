@@ -1,8 +1,7 @@
 class Client < ActiveRecord::Base
 	has_many :bills, :dependent => :destroy
 	validates :name, :surname, :birthdate, :genre, :dni, :cuil, :email, presence: true
-	validates :cuil, length: { is: 11 }
-	validates :dni, :cuil, uniqueness: true
+	validates :dni, :cuil, uniqueness: true, numericality: { only_integer: true }
 	validates_associated :bills
 
 	def age
@@ -25,10 +24,8 @@ class Client < ActiveRecord::Base
 
 	def more_invoiced
 		hsh = {}
-		self.bills.each{|b| hsh[b.person.cuit] = hsh.fetch(b.person.cuit,0) + 1}
-		hsh.sort_by {|cuil, cant| cant }.first(5).collect {|p|
-			(Person.find_by cuit: p).name
-		}
+		self.bills.each{|b| hsh[b.person] = hsh.fetch(b.person,0) + 1}
+		hsh.sort_by {|p, cant| cant }.reverse.first(5)
 	end
 
 	def full_name
