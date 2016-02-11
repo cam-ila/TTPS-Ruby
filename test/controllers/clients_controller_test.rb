@@ -18,7 +18,7 @@ class ClientsControllerTest < ActionController::TestCase
 
   test "should create client" do
     assert_difference('Client.count') do
-      post :create, client: { address: @client.address, birthdate: @client.birthdate, cuil: @client.cuil, dni: @client.dni, email: @client.email, genre: @client.genre, name: @client.name, skype: @client.skype, surname: @client.surname, telephone: @client.telephone }
+      post :create, client: { address: @client.address, birthdate: @client.birthdate, cuil: 100, dni: 100, email: @client.email, genre: @client.genre, name: @client.name, skype: @client.skype, surname: @client.surname, telephone: @client.telephone }
     end
 
     assert_redirected_to client_path(assigns(:client))

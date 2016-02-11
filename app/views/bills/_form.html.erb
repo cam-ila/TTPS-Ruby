@@ -27,11 +27,12 @@
   </div>
   <div class="form-group">
     <% f.label :client_id %> Cliente <br> 
-    <%= f.text_field :client_id, required: true, class: 'form-control' %>
+    <%= f.select :client_id, Client.all.collect {|c| [c.cuil, c.id] }, required: true, class: 'form-control' %>
   </div>
   <div class="form-group">
     <% f.label :person_id %> Persona <br>
-    <%= f.text_field :person_id, required: true, class: 'form-control' %>
+   <%= f.select :person_id, Person.all.collect {|c| [c.cuit, c.id] }, required: true, class: 'form-control' %>
+
   </div>
   <div class="actions">
     <%= f.submit class: 'btn btn-default' %>

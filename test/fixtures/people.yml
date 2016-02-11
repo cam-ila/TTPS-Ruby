@@ -2,11 +2,11 @@
 
 one:
   name: MyString
-  cuit: 1
+  cuit: 99999
 
 two:
   name: MyString
-  cuit: 1
+  cuit: 1000
 
 three:
   name: angel legna

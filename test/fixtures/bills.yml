@@ -3,16 +3,16 @@
 one:
   description: MyString
   date: 2016-02-05 19:04:17
-  amount: 
-  client_id: 
-  person_id: 
+  amount: 100
+  client_id: 2
+  person_id: 1
 
 two:
   description: MyString
   date: 2016-02-05 19:04:17
-  amount: 
-  client_id: 
-  person_id:
+  amount: 100
+  client_id: 2
+  person_id: 1
 
 three:
   description: factura

@@ -4,11 +4,11 @@ one:
   surname: MyString
   birthdate: 2016-02-05 18:36:04
   genre: MyString
-  dni: 1
-  cuil: 1
+  dni: 9
+  cuil: 9
   skype: MyString
   email: MyString
-  telephone: MyString
+  telephone: 44444
   address: MyString
 
 two:
@@ -16,11 +16,11 @@ two:
   surname: MyString
   birthdate: 2016-02-05 18:36:04
   genre: MyString
-  dni: 1
-  cuil: 1
+  dni: 10
+  cuil: 10
   skype: MyString
   email: MyString
-  telephone: MyString
+  telephone: 111
   address: MyString
 
 three:
